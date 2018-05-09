@@ -7,10 +7,10 @@ from src.excel_provider import load_data
 def create_regression_nn(x_train, y_train):
     model = Sequential()
     model.add(Dense(9, activation='relu', input_shape=(9,)))
-    model.add(Dense(7, activation='relu'))
+    model.add(Dense(9, activation='relu'))
     model.add(Dense(1))
     model.compile(optimizer='adam', loss='mse', metrics=['mae'])
-    info = model.fit(x_train, y_train, epochs=20, batch_size=1, verbose=0)
+    info = model.fit(x_train, y_train, epochs=100, batch_size=1, verbose=0)
     print(info.history)
     return model
 
