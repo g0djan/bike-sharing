@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def normalize(data_frame):
-    return (data_frame - data_frame.mean()) / data_frame.std() #(data_frame.max() - data_frame.min())  # data_frame.std()
+    return (data_frame - data_frame.mean()) / data_frame.std()
 
 
 def load_data(filename, tablename, columns):
